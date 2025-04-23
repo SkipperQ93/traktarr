@@ -131,7 +131,7 @@ export default function SettingsPage() {
               onChange={(e) => setRedirectUri(e.target.value)}
               required
               mb="md"
-              description="This app uses device code authentication, but Trakt still requires a redirect URI when creating an application. You can set this to the URL where this app is running, e.g., http://localhost:5173"
+              description={"This app uses device code authentication, but Trakt still requires a redirect URI when creating an application. You can set this to the URL where this app is running, e.g., " + window.location.origin}
             />
           </Box>
 
@@ -159,7 +159,7 @@ export default function SettingsPage() {
             <Title order={5} mb="sm" c="red" fw={700}>Important Notes</Title>
             <ul style={{ paddingLeft: "20px", margin: 0 }}>
               <li><strong>Redirect URIs:</strong> You <u>must</u> add <code>urn:ietf:wg:oauth:2.0:oob</code> to the redirect URIs for device authentication to work.</li>
-              <li><strong>CORS Issues:</strong> Authentication may not work on localhost due to CORS restrictions. If you encounter issues, try using a browser extension that disables CORS or deploy to a proper domain.</li>
+              <li><strong>CORS Issues:</strong> If you are a developer, authentication may not work on localhost due to CORS restrictions. If you encounter issues, try using a browser extension that disables CORS or deploy to a proper domain.</li>
             </ul>
           </Card>
           
@@ -177,11 +177,11 @@ export default function SettingsPage() {
                 <li><strong>Description:</strong> Personal app for exporting my Trakt data</li>
                 <li><strong>Redirect URI:</strong> Add TWO entries (both are required):
                   <ul style={{ listStyleType: 'circle', paddingLeft: '20px' }}>
-                    <li>Where this app is running: <code>http://localhost:5173</code></li>
+                    <li>Where this app is running: <code>{window.location.origin}</code></li>
                     <li>Device authentication: <code>urn:ietf:wg:oauth:2.0:oob</code></li>
                   </ul>
                 </li>
-                <li><strong>JavaScript Origins:</strong> The base URL: <code>http://localhost:5173</code></li>
+                <li><strong>JavaScript Origins:</strong> The base URL: <code>{window.location.origin}</code></li>
               </ul>
             </li>
             

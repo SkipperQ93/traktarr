@@ -65,6 +65,9 @@ I provide a hosted version of the app at [traktarr.igerman.cc](https://traktarr.
 
 ### Creating a Trakt Application (Required)
 
+> [!WARNING]
+> This section is for **nerds**! If you just want to use the app, you can skip this part and use the hosted version - it will have better instructions.
+
 This app uses a "Bring Your Own Key" (BYOK) approach, meaning you need to create your own Trakt application to get API credentials:
 
 1. Go to [Trakt API Applications](https://trakt.tv/oauth/applications)
