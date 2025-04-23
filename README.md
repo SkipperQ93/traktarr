@@ -35,7 +35,7 @@ I provide a hosted version of the app at [traktarr.igerman.cc](https://traktarr.
 
 ## Features
 
-- **Authentication**: Secure device authentication with Trakt
+- **Authentication**: Secure OAuth authentication with Trakt
 - **Dashboard**: Overview of your Trakt activity and stats
 - **Watch History**: View and filter your complete watch history
 - **Collection**: Browse your movie and TV show collection
@@ -83,9 +83,10 @@ This app uses a "Bring Your Own Key" (BYOK) approach, meaning you need to create
    - **Description**: Personal app for exporting my Trakt data
    - **Redirect URI**:
      - `http://localhost:5173/auth` (for local development)
-     - `urn:ietf:wg:oauth:2.0:oob` (**required** for device authentication)
-   - **JavaScript Origins**: 
-     - `http://localhost:5173`
+     - `https://traktarr.igerman.cc/auth` (for the hosted version, or your deployed URL ending with `/auth`)
+   - **JavaScript Origins**:
+     - `http://localhost:5173` (for local dev)
+     - `https://traktarr.igerman.cc` (for the hosted version, or your deployed domain)
 5. Click "Save App"
 6. You'll now see your `Client ID` and `Client Secret`
 7. Copy these values for use in the dashboard

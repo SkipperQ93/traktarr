@@ -131,7 +131,10 @@ export default function SettingsPage() {
               onChange={(e) => setRedirectUri(e.target.value)}
               required
               mb="md"
-              description={"This app uses device code authentication, but Trakt still requires a redirect URI when creating an application. You can set this to the URL where this app is running, e.g., " + window.location.origin}
+              description={
+                "Set this to the URL where this app is running, ending with /auth. For example: " +
+                window.location.origin + "/auth"
+              }
             />
           </Box>
 
@@ -155,8 +158,12 @@ export default function SettingsPage() {
           <Card withBorder p="md" bg="var(--mantine-color-gray-light)">
             <Title order={5} mb="sm" c="red" fw={700}>Important Notes</Title>
             <ul style={{ paddingLeft: "20px", margin: 0 }}>
-              <li><strong>Redirect URIs:</strong> You <u>must</u> add <code>urn:ietf:wg:oauth:2.0:oob</code> to the redirect URIs for device authentication to work.</li>
-              <li><strong>CORS Issues:</strong> If you are a developer, authentication may not work on localhost due to CORS restrictions. If you encounter issues, try using a browser extension that disables CORS or deploy to a proper domain.</li>
+              <li>
+                <strong>Redirect URIs:</strong> You <u>must</u> add the URL where this app is running, ending with <code>/auth</code> (e.g., <code>{window.location.origin}/auth</code>), as the Redirect URI in your Trakt application.
+              </li>
+              <li>
+                <strong>CORS Issues:</strong> If you are a developer, authentication may not work on localhost due to CORS restrictions. If you encounter issues, try using a browser extension that disables CORS or deploy to a proper domain.
+              </li>
             </ul>
           </Card>
           <ol style={{ paddingLeft: '20px' }}>
@@ -170,13 +177,12 @@ export default function SettingsPage() {
               <ul style={{ paddingLeft: '20px' }}>
                 <li><strong>Name:</strong> Traktarr (or any name)</li>
                 <li><strong>Description:</strong> Personal app for exporting my Trakt data</li>
-                <li><strong>Redirect URI:</strong> Add TWO entries:
-                  <ul style={{ listStyleType: 'circle', paddingLeft: '20px' }}>
-                    <li><code>{window.location.origin}</code></li>
-                    <li><code>urn:ietf:wg:oauth:2.0:oob</code></li>
-                  </ul>
+                <li>
+                  <strong>Redirect URI:</strong> Add <code>{window.location.origin}/auth</code> (or your deployed URL ending with <code>/auth</code>)
                 </li>
-                <li><strong>JavaScript Origins:</strong> <code>{window.location.origin}</code></li>
+                <li>
+                  <strong>JavaScript Origins:</strong> <code>{window.location.origin}</code>
+                </li>
               </ul>
             </li>
             

@@ -18,18 +18,18 @@ import ExportPage from './pages/ExportPage';
 import SettingsPage from './pages/SettingsPage';
 
 // Auth
-import { DeviceAuth } from './components/Auth/DeviceAuth';
+import { OAuthRedirectAuth } from './components/Auth/OAuthRedirectAuth';
 
 // Auth page component
 const AuthPage = () => (
-  <div style={{ 
-    display: 'flex', 
-    justifyContent: 'center', 
-    alignItems: 'center', 
+  <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     minHeight: '100vh',
     padding: '20px'
   }}>
-    <DeviceAuth />
+    <OAuthRedirectAuth />
   </div>
 );
 
