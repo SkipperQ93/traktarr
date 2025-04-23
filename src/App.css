@@ -1,0 +1,33 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Custom styles for the app */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Component-specific styles */
+.data-card {
+  transition: transform 0.2s ease;
+}
+
+.data-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Data visualization colors */
+.color-movies {
+  color: var(--mantine-color-blue-6);
+}
+
+.color-shows {
+  color: var(--mantine-color-teal-6);
+}
+
+.color-ratings {
+  color: var(--mantine-color-yellow-6);
+}
