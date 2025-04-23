@@ -3,6 +3,11 @@
 > The code quality may be poor, as it was made for fun and as a one-off for a personal need. I literally haven't checked the vast majority of the code, but it works so ¯\\\_(ツ)\_/¯.  
 > Use at your own risk!
 
+> [!NOTE]
+> I realize that this project technically cuts into Trakt's business model. Realistically, this is a very niche contraption for people that probably want to leave the Trakt platform regardless, like I did years ago with Simkl. I think "CSV Exports" are far enough down the selling point list that this is entirely irrelevant. Plus, there are similar projects out there, just without the nice UI. My personal opinion hardly matters, but it's very annoying that I have to pay a monthly fee to takeout the data that **I myself** have put into the Trakt platform.
+>
+> Also, this data is freely accessible via the API and Traktarr is entirely BYOK and intended for personal use only. So... sorry Trakt. No hard feelings? 💔
+
 ---
 
 # [<img src="public/favicons/android-icon-48x48.png" alt='Ugly ahh tractor' height="22">](//traktarr.igerman.cc) [Traktarr](//traktarr.igerman.cc) - Export *your* data
