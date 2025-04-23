@@ -74,7 +74,7 @@ export default function SettingsPage() {
     // Show success notification
     notifications.show({
       title: 'Success',
-      message: 'Trakt API credentials saved successfully',
+      message: 'Trakt API credentials saved successfully. Go back to the home page to log in and start using the app.',
       color: 'green',
     });
 
@@ -100,7 +100,7 @@ export default function SettingsPage() {
           <Title order={3}>Trakt API Credentials</Title>
           <Text size="sm" c="dimmed">
             To use this app, you need to provide your own Trakt API credentials. 
-            These credentials are stored locally in your browser and are never sent to any server other than Trakt.tv.
+            These credentials are stored locally in your browser and are never sent to any server other than Trakt.
           </Text>
 
           <Divider my="sm" />

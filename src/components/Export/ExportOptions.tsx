@@ -223,35 +223,35 @@ export function ExportOptionsForm() {
         
         <Checkbox
           label="Watch History"
-          description={history.length > 0 ? `${history.length} items loaded` : "Will fetch from Trakt.tv"}
+          description={history.length > 0 ? `${history.length} items loaded` : "Will fetch from Trakt"}
           checked={options.includeHistory}
           onChange={(e) => updateOption('includeHistory', e.currentTarget.checked)}
         />
         
         <Checkbox
           label="Watched Items"
-          description={watched.length > 0 ? `${watched.length} items loaded` : "Will fetch from Trakt.tv"}
+          description={watched.length > 0 ? `${watched.length} items loaded` : "Will fetch from Trakt"}
           checked={options.includeWatched}
           onChange={(e) => updateOption('includeWatched', e.currentTarget.checked)}
         />
         
         <Checkbox
           label="Ratings"
-          description={ratings.length > 0 ? `${ratings.length} items loaded` : "Will fetch from Trakt.tv"}
+          description={ratings.length > 0 ? `${ratings.length} items loaded` : "Will fetch from Trakt"}
           checked={options.includeRatings}
           onChange={(e) => updateOption('includeRatings', e.currentTarget.checked)}
         />
         
         <Checkbox
           label="Collection"
-          description={collection.length > 0 ? `${collection.length} items loaded` : "Will fetch from Trakt.tv"}
+          description={collection.length > 0 ? `${collection.length} items loaded` : "Will fetch from Trakt"}
           checked={options.includeCollection}
           onChange={(e) => updateOption('includeCollection', e.currentTarget.checked)}
         />
         
         <Checkbox
           label="Stats"
-          description={stats ? "User statistics loaded" : "Will fetch from Trakt.tv"}
+          description={stats ? "User statistics loaded" : "Will fetch from Trakt"}
           checked={options.includeStats}
           onChange={(e) => updateOption('includeStats', e.currentTarget.checked)}
         />

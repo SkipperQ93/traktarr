@@ -5,13 +5,32 @@
 
 ---
 
-# Traktarr 🚜
+# [<img src="public/favicons/android-icon-48x48.png" alt='Ugly ahh tractor' height="22">](//traktarr.igerman.cc) [Traktarr](//traktarr.igerman.cc) - Export *your* data
 
-A modern, user-friendly web application for exporting and visualizing your Trakt.tv data. This app allows you to access, view, and export your Trakt data in various formats without requiring a paid subscription.
+<img src="public/favicons/android-icon-144x144.png" alt="Ugly ahh tractor" height="128" align="right"/>
+
+> A modern, user-friendly web application for exporting and visualizing your Trakt data.
+> 
+> Access, view, and export your data in various formats without requiring a paid subscription, because you should have your data.
+
+<br>
+<p align="center">
+<img src="screenshot.webp" alt="Screenshot of the app"/>
+  <div align="center">	
+  
+[<img src="https://cdn.prod.website-files.com/5c14e387dab576fe667689cf/670f5a0171bfb928b21a7e00_support_me_on_kofi_beige-p-500.png" alt='Donate on Ko-Fi' height="48">](//ko-fi.com/vizzy)
+    
+  </div>
+</p>
+<!-- ![image](https://github.com/user-attachments/assets/c27529cb-5f45-40ef-8ad3-8a1b8aca6e33) -->
+
+## Use now
+
+I provide a hosted version of the app at [traktarr.igerman.cc](https://traktarr.igerman.cc) via GitHub Pages. Your data is never sent to my server, and all processing happens in your browser.
 
 ## Features
 
-- **Authentication**: Secure device authentication with Trakt.tv
+- **Authentication**: Secure device authentication with Trakt
 - **Dashboard**: Overview of your Trakt activity and stats
 - **Watch History**: View and filter your complete watch history
 - **Collection**: Browse your movie and TV show collection
@@ -54,10 +73,11 @@ This app uses a "Bring Your Own Key" (BYOK) approach, meaning you need to create
 4. Fill in the application details:
    - **Name**: Traktarr (or any name you prefer)
    - **Description**: Personal app for exporting my Trakt data
-   - **Redirect URI**: `http://localhost:5173/auth` (for local development)
+   - **Redirect URI**:
+     - `http://localhost:5173/auth` (for local development)
+     - `urn:ietf:wg:oauth:2.0:oob` (**required** for device authentication)
    - **JavaScript Origins**: 
      - `http://localhost:5173`
-     - `urn:ietf:wg:oauth:2.0:oob` (you need both, especially that last one for device authentication)
 5. Click "Save App"
 6. You'll now see your `Client ID` and `Client Secret`
 7. Copy these values for use in the dashboard
@@ -99,7 +119,7 @@ The built files will be in the `dist` directory.
 
 ## Privacy
 
-This application runs entirely in your browser. Your Trakt.tv credentials and data are never sent to any server other than Trakt.tv's official API. All data processing happens locally on your device.
+This application runs entirely in your browser. Your Trakt credentials and data are never sent to any server other than Trakt's official API. All data processing happens locally on your device.
 
 ## License
 
@@ -107,5 +127,5 @@ This project is licensed under the GNU Affero General Public License v3.0. See t
 
 ## Acknowledgments
 
-- [Trakt.tv](https://trakt.tv/) for their API
+- [Trakt](https://trakt.tv/) for their API
 - [@dvcol/trakt-http-client](https://github.com/dvcol/trakt-http-client) for the Trakt API client library

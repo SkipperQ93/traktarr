@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { GITHUB_URL } from '../config';
 import {
   AppShell,
   Group,
@@ -112,6 +113,27 @@ export default function AppLayout({ children, onLogout }: AppLayoutProps) {
       </AppShell.Navbar>
       <AppShell.Main>
         {children}
+        <footer
+          style={{
+            width: '100%',
+            textAlign: 'center',
+            fontSize: '0.85rem',
+            color: 'var(--mantine-color-dimmed, #888)',
+            marginTop: '2rem',
+            padding: '1rem 0 0.5rem 0',
+            opacity: 0.8,
+          }}
+        >
+          Not affiliated with Trakt or trakt, inc. |{' '}
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'inherit', textDecoration: 'underline' }}
+          >
+            GitHub
+          </a>
+        </footer>
       </AppShell.Main>
     </AppShell>
   );
