@@ -117,60 +117,35 @@ export function DeviceAuth() {
                 >
                   Before connecting to Trakt, you need to set up your API
                   credentials. Please go to the Settings page to enter your
-                  Trakt API credentials.
+                  Trakt API credentials, then return here to connect.
                 </Alert>
                 <Stack mt="md">
                   <Text size="sm" fw={500}>
                     How to create a Trakt application:
                   </Text>
-                  <ol style={{ paddingLeft: "20px", margin: 0 }}>
-                    <li>
-                      Go to{" "}
-                      <a
-                        href="https://trakt.tv/oauth/applications/new"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Trakt Applications
-                      </a>
-                    </li>
-                    <li>
-                      Fill in the required fields:
-                      <ul style={{ paddingLeft: "20px" }}>
-                        <li>
-                          <strong>Name:</strong> Traktarr (or any name)
-                        </li>
-                        <li>
-                          <strong>Description:</strong> Personal app for
-                          exporting my Trakt data
-                        </li>
-                        <li>
-                          <strong>Redirect URI:</strong>{" "}
-                          {window.location.origin}/auth
-                        </li>
-                        <li>
-                          For Device authentication, add:{" "}
-                          <code>urn:ietf:wg:oauth:2.0:oob</code>
-                        </li>
-                        <li>
-                          <strong>JavaScript Origins:</strong>{" "}
-                          {window.location.origin}
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      Check required permissions (at minimum):
-                      <ul style={{ paddingLeft: "20px" }}>
-                        <li>info (read your public info)</li>
-                        <li>history (read your watched history)</li>
-                        <li>collection (read your collection)</li>
-                        <li>ratings (read your ratings)</li>
-                      </ul>
-                    </li>
-                    <li>
-                      Click "Save App" and copy your Client ID and Client Secret
-                    </li>
-                  </ol>
+                  <ol style={{ paddingLeft: '20px' }}>
+                  <li><strong>Go to Trakt API Applications:</strong><br/>
+                    Visit <a href="https://trakt.tv/oauth/applications" target="_blank" rel="noopener noreferrer">Trakt API Applications</a> and sign in</li>
+                  
+                  <li><strong>Create New Application:</strong><br/>
+                    Click the "New Application" button</li>
+                  
+                  <li><strong>Fill in the application details:</strong>
+                    <ul style={{ paddingLeft: '20px' }}>
+                      <li><strong>Name:</strong> Traktarr (or any name)</li>
+                      <li><strong>Description:</strong> Personal app for exporting my Trakt data</li>
+                      <li><strong>Redirect URI:</strong> Add TWO entries:
+                        <ul style={{ listStyleType: 'circle', paddingLeft: '20px' }}>
+                          <li><code>{window.location.origin}</code></li>
+                          <li><code>urn:ietf:wg:oauth:2.0:oob</code></li>
+                        </ul>
+                      </li>
+                      <li><strong>JavaScript Origins:</strong> <code>{window.location.origin}</code></li>
+                    </ul>
+                  </li>
+                  
+                  <li><strong>Click "Save App"</strong> and copy your credentials</li>
+                </ol>
                 </Stack>
                 <Button
                   onClick={goToSettings}

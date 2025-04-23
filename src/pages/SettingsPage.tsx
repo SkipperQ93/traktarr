@@ -151,22 +151,17 @@ export default function SettingsPage() {
       <Card shadow="sm" padding="xl" radius="md" withBorder className="data-card">
         <Stack>
           <Title order={3}>How to Create a Trakt Application</Title>
-          <Text size="sm" mb="md">
-            To use this app, you need to create your own Trakt application to get API credentials.
-          </Text>
 
-          <Card withBorder p="md" bg="var(--mantine-color-gray-light)" mb="xl">
+          <Card withBorder p="md" bg="var(--mantine-color-gray-light)">
             <Title order={5} mb="sm" c="red" fw={700}>Important Notes</Title>
             <ul style={{ paddingLeft: "20px", margin: 0 }}>
               <li><strong>Redirect URIs:</strong> You <u>must</u> add <code>urn:ietf:wg:oauth:2.0:oob</code> to the redirect URIs for device authentication to work.</li>
               <li><strong>CORS Issues:</strong> If you are a developer, authentication may not work on localhost due to CORS restrictions. If you encounter issues, try using a browser extension that disables CORS or deploy to a proper domain.</li>
             </ul>
           </Card>
-          
-          <Title order={4} mb="md">Step-by-Step Instructions</Title>
           <ol style={{ paddingLeft: '20px' }}>
             <li><strong>Go to Trakt API Applications:</strong><br/>
-               Visit <a href="https://trakt.tv/oauth/applications" target="_blank" rel="noopener noreferrer">Trakt API Applications</a> and sign in (or create an account)</li>
+               Visit <a href="https://trakt.tv/oauth/applications" target="_blank" rel="noopener noreferrer">Trakt API Applications</a> and sign in</li>
             
             <li><strong>Create New Application:</strong><br/>
                Click the "New Application" button</li>
@@ -175,13 +170,13 @@ export default function SettingsPage() {
               <ul style={{ paddingLeft: '20px' }}>
                 <li><strong>Name:</strong> Traktarr (or any name)</li>
                 <li><strong>Description:</strong> Personal app for exporting my Trakt data</li>
-                <li><strong>Redirect URI:</strong> Add TWO entries (both are required):
+                <li><strong>Redirect URI:</strong> Add TWO entries:
                   <ul style={{ listStyleType: 'circle', paddingLeft: '20px' }}>
-                    <li>Where this app is running: <code>{window.location.origin}</code></li>
-                    <li>Device authentication: <code>urn:ietf:wg:oauth:2.0:oob</code></li>
+                    <li><code>{window.location.origin}</code></li>
+                    <li><code>urn:ietf:wg:oauth:2.0:oob</code></li>
                   </ul>
                 </li>
-                <li><strong>JavaScript Origins:</strong> The base URL: <code>{window.location.origin}</code></li>
+                <li><strong>JavaScript Origins:</strong> <code>{window.location.origin}</code></li>
               </ul>
             </li>
             
