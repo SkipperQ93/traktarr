@@ -55,7 +55,7 @@ I provide a hosted version of the app at [traktarr.igerman.cc](https://traktarr.
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/traktarr.git
+   git clone https://github.com/SkipperQ93/traktarr.git
    cd traktarr
    ```
 
